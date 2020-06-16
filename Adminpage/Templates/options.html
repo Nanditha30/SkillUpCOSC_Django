@@ -31,7 +31,12 @@
         #selectapplicants {
             margin-top: 10px;
             margin-right: 0px !important;
-            margin-bottom: 0px !important;
+            margin-bottom: 10px !important;
+        }
+        #VV {
+            margin-top: 10px;
+            margin-right: 0px !important;
+            margin-bottom: 10px !important;
         }
 
         .wrap-login1001 {
@@ -57,12 +62,22 @@
         <div class="container-login100">
             <div class="wrap-login1001">
                 <div class="buttContainer">
-                    <button type="submit" class="login100-form-btn" id="updatevacancies" form="form1">
-                        Update Vacancies
-                    </button>
-                    <button type="submit" class="login100-form-btn" id="selectapplicants" form="form1">
-                        Select Applicants
-                    </button>
+                    <form id=formUV>
+                        <button type="submit" class="login100-form-btn" id="updatevacancies" form="formUV">
+                            Upload Vacancies
+                        </button>
+                    </form>
+                    <form id=formSA>
+                        <button type="submit" class="login100-form-btn" id="selectapplicants" form="formSA">
+                            Select Applicants
+                        </button>
+                    </form>
+                   <form id=formVV>
+                        <button type="submit" class="login100-form-btn" id="VV" form="formVV">
+                            View Vacancies
+                        </button>
+                   </form>
+                    
                 </div>
             </div>
         </div>
