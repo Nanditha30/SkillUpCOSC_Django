@@ -310,6 +310,11 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Button ]*/
+.buttContainer {
+
+  background-color: black;
+}
+
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;

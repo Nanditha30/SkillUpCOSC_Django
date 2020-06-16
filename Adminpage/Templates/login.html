@@ -31,7 +31,8 @@
 					<img src="{% static 'images/img-01.png' %}" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="options" id="form1" method="POST">
+					{% csrf_token %}
 					<span class="login100-form-title">
 						Admin Login
 					</span>
@@ -53,7 +54,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button type="submit" class="login100-form-btn" form="form1">
 							Login
 						</button>
 					</div>
