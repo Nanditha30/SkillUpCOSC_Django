@@ -46,14 +46,10 @@
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login1002">
-                <form class="login100-form validate-form" onsubmit="validate(this)" id="form1" method="POST">
+                <form class="login100-form validate-form" onsubmit="validate(this)" id="form1" method="POST" action="sendvac">
                     {% csrf_token %}
                     <div class="login100-form-title" id='uploadvacancies'>
                         Upload Vacancies
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate='required'>
-                        Vacant Role:<input class="input100" type="text" name="vacantrole" placeholder="Vacant Role">
-					<span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate='required'>
                         Position:<input class="input100" type="text" name="position" placeholder="Position">
@@ -68,12 +64,12 @@
 					<span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate='required'>
-                        CGPA:<input class="input100" type="text" name="CGPA" placeholder="CGPA">
+                        Percentage:<input class="input100" type="text" name="percentage" placeholder="CGPA">
                     <span class="focus-input100"></span>
                     </div>
 
                     <div class="container-login100-form-btn" data-validate="required">
-                        <button type="submit" class="login100-form-btn" id="Upload">
+                        <button type="submit" class="login100-form-btn" form="form1" id="Upload">
                             Upload
                         </button>
                     </div>

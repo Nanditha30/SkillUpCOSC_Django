@@ -6,4 +6,5 @@ urlpatterns = [
     path('CreateAccount/',views.register,name='register'),
     path('options',views.options),
     path('upload/',views.upload,name='upload'),
+    path('upload/sendvac',views.sendvac)
 ]
