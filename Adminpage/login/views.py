@@ -22,16 +22,12 @@ def upload(request):
     return render(request,'upload.html')
 
 def sendvac(request):
-    class sv:
-        id=10
-    global id
-    idstr=str(id)
-    i=5
+    idi=id('i')
+    idstr=str(idi)
     deptname1=request.POST['department']
     position1=request.POST['position']
     reqqual1=request.POST['Qualification']
     percentage1=request.POST['percentage']
     vac = { 'vacant_roll_id':idstr,'Dept_name':deptname1,'Position_vacant':position1,'Required_quali':reqqual1,'percentage':percentage1}
     r=requests.post('https://admintesting.herokuapp.com/addvacantroles',vac)
-    id=i+2
     return HttpResponse(r.text)
