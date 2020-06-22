@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
+import json
 
 # Create your views here.
 
@@ -31,3 +32,15 @@ def sendvac(request):
     vac = { 'vacant_roll_id':idstr,'Dept_name':deptname1,'Position_vacant':position1,'Required_quali':reqqual1,'percentage':percentage1}
     r=requests.post('https://admintesting.herokuapp.com/addvacantroles',vac)
     return HttpResponse(r.text)
+
+def viewvac(request):
+    #vac={}
+    vac=requests.get('https://admintesting.herokuapp.com/seevacanciesadmin')
+    #return HttpResponse(vac.text)
+    return render(request,'viewvac.html',{'vacs': vac.json()})
+
+def select(request):
+    applicants={}
+    applicants=requests.get('https://admintesting.herokuapp.com/seedetails','1')
+    return HttpResponse(applicants.text)
+    #return render(request,'viewvac.html',vacs)
