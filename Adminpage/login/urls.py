@@ -8,5 +8,6 @@ urlpatterns = [
     path('upload/',views.upload,name='upload'),
     path('upload/sendvac',views.sendvac),
     path('viewvac',views.viewvac),
-    path('select',views.select)
+    path('select',views.select),
+    path('upload/viewvac',views.viewvac),
 ]
