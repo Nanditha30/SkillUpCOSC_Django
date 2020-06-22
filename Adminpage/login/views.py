@@ -31,7 +31,10 @@ def sendvac(request):
     percentage1=request.POST['percentage']
     vac = { 'vacant_roll_id':idstr,'Dept_name':deptname1,'Position_vacant':position1,'Required_quali':reqqual1,'percentage':percentage1}
     r=requests.post('https://admintesting.herokuapp.com/addvacantroles',vac)
-    return HttpResponse(r.text)
+    if(r.status_code==201):
+        return render(request, 'options.html', {'alert_flag': True})
+    else:
+        return render(request, 'upload.html', {'alert_flag': True})
 
 def viewvac(request):
     #vac={}
