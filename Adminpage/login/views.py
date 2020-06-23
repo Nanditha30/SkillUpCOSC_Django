@@ -19,6 +19,8 @@ def options(request):
         return render(request,'options.html')
     else:
         return render(request,'login.html')
+def optionsp(request):
+    return render(request,'options.html')
 def upload(request):
     return render(request,'upload.html')
 

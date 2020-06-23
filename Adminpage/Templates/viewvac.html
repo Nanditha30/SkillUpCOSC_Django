@@ -54,6 +54,10 @@
             margin-left: 550px;
             font-family: Lato-Bold;
             }
+        .container-login100-form-btn{
+            margin-left: 100px;
+            width: 200px;
+        }
     </style>
     <title>Options Page</title>
 </head>
@@ -86,18 +90,27 @@
                                             {% for vac in vacs %}
                                             <tr class="row100 body">
                                                 <td class="cell100 column1">{{vac.POSITION}}</td>
-                                                <td class="cell100 column2">{{vac.REQUIRED}}</td>
+                                                <td class="cell100 column2">{{vac.QUALIFICATION}}</td>
                                                 <td class="cell100 column3">{{vac.DEPARTMENT}}</td>
                                                 <td class="cell100 column4">{{vac.CGPA}}</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
                                     </table>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <form id="form1" action="optionsP">
+                    <div class="container-login100-form-btn">
+                        <button type="submit" class="login100-form-btn" form="form1" id="Upload">
+                            OPTIONS PAGE
+                        </button>
+                    </div>
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>

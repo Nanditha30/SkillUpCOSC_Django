@@ -10,4 +10,5 @@ urlpatterns = [
     path('viewvac',views.viewvac),
     path('select',views.select),
     path('upload/viewvac',views.viewvac),
+    path('optionsP',views.optionsp),
 ]
