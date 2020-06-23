@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 import requests
 import json
 
@@ -34,8 +34,7 @@ def sendvac(request):
     if(r.status_code==201):
         return render(request, 'options.html', {'alert_flag': True})
     else:
-        return render(request, 'upload.html', {'alert_flag': True})
-
+        return render(request, 'upload.html', {'alert_flag': True})   
 def viewvac(request):
     #vac={}
     vac=requests.get('https://admintesting.herokuapp.com/seevacanciesadmin')
@@ -47,3 +46,6 @@ def select(request):
     applicants=requests.get('https://admintesting.herokuapp.com/seedetails','1')
     return HttpResponse(applicants.text)
     #return render(request,'viewvac.html',vacs)
+def recruitedfaculty(request):
+    recruited_data=requests.get('https://admintesting.herokuapp.com/checkfaculty','1')
+    return render(request,'recruitedfaculty.html', {'recruited_data':recruited_data.json()})

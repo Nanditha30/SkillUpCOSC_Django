@@ -7,7 +7,9 @@ urlpatterns = [
     path('options',views.options),
     path('upload/',views.upload,name='upload'),
     path('upload/sendvac',views.sendvac),
-    path('viewvac',views.viewvac),
-    path('select',views.select),
+    path('viewvac',views.viewvac,name='viewvacancies'),
+    path('select',views.select,name='selectapplicants'),
     path('upload/viewvac',views.viewvac),
+    path('recruitedfaculty/',views.recruitedfaculty,name='recruitedfaculty'),
+    path('upload/recruitedfaculty',views.recruitedfaculty),
 ]
