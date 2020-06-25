@@ -12,6 +12,7 @@ urlpatterns = [
     #path('upload/viewvac',views.viewvac),
     path('optionsP',views.optionsp),
     path('recruitedfaculty',views.recruitedfaculty,name='recruitedfaculty'),
+    path('pselect',views.pselect)
     #path('upload/recruitedfaculty',views.recruitedfaculty),
     
 ]
