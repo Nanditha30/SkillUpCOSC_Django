@@ -84,8 +84,9 @@ def pselect(request):
         i+=1
     i=0
     while i < n : ####This is for Writing Status
-        stat={'Application_id':alist[i],'id_Status':slist[i]}
-        r=requests.post('https://admintesting.herokuapp.com/writestatus',stat)
+        if slist[i]!="RECIEVED " :
+            stat={'Application_id':alist[i],'id_Status':slist[i]}
+            r=requests.post('https://admintesting.herokuapp.com/writestatus',stat)
         i+=1
     i=0
     while i < n : ####This is for sending values to Recruited Faculty table
@@ -93,7 +94,7 @@ def pselect(request):
             stati={'EmailId':elist[i],'Roll_id':rlist[i]}
             r=requests.post('https://admintesting.herokuapp.com/recruited',stati)
         i+=1
-    if(r.status_code==201):
+    if(r.status_code==200):
         return render(request, 'options.html', {'alert_flag': True})
     else:
         return render(request, 'select.html', {'alert_flag': True})
