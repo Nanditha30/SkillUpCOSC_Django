@@ -81,11 +81,11 @@
                                     <table>
                                         <thead>
                                             <tr class="row100 head">
-                                                <th class="cell100 column1"style="width: 15px;">Email</th>                                                
-                                                <th class="cell100 column1" style="width: 5px;">Application No</th>                                                
-                                                <th class="cell100 column2">Department</th>
-                                                <th class="cell100 column3">QUALIFICATION</th>
-                                                <th class="cell100 column4"style="width: 5px;">CGPA</th>
+                                                <th class="cell100 column1"style="width: 100px;">Email</th>                                                
+                                                <th class="cell100 column2" style="width: 100px;">Application No</th>                                                
+                                                <th class="cell100 column3" style="width: 100px;">Department</th>
+                                                <th class="cell100 column3"style="width: 100px;">QUALIFICATION</th>
+                                                <th class="cell100 column4"style="width: 100px;">CGPA</th>
                                                 <th class="cell100 column4">STATUS</th>                    
                                             </tr>
                                         </thead>
@@ -100,10 +100,10 @@
                                                 {% for app in apps %}
                                                 <tr class="row100 body">
                                                     <td class="cell100 column1" style="width: 15px;">{{app.EmailId}}</td>
-                                                    <td class="cell100 column1" style="width: 5px;">{{app.Application_id}}</td>
-                                                    <td class="cell100 column2">{{app.Dept_Qualified}}</td>
-                                                    <td class="cell100 column3">{{app.Qualification}}</td>
-                                                    <td class="cell100 column4" style="width: 5px;">{{app.CGPA}}</td>
+                                                    <td class="cell100 column2" style="width:0px;">{{app.Application_id}}</td>
+                                                    <td class="cell100 column3" style="width: 0px;">{{app.Dept_Qualified}}</td>
+                                                    <td class="cell100 column3" style="width: 0px;">{{app.Qualification}}</td>
+                                                    <td class="cell100 column4"style="width: 0px;">{{app.CGPA}}</td>
                                                     <td class="cell100 column4"><input type="text" name="statuslist" placeholder="RECIEVED" value="RECIEVED "></td>
                                                 </tr>
                                                 {% endfor %}
